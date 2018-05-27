@@ -5,10 +5,10 @@ const Search = props =>
     <div className="form-group">
       <label htmlFor="search">Search:</label>
       <input
-        onChange={props.handleInputChange}
+      onChange={props.handleInputChange}
         value={props.value}
         name="search"
-        type="text"
+        type="number"
         className="form-control"
         placeholder="Search a Number"
         id="search"

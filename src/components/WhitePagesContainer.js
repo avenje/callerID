@@ -4,7 +4,7 @@ import Row from "./Row";
 import Col from "./Col";
 import Panel from "./Panel";
 import Search from "./Search";
-import MovieDetail from "./MovieDetail";
+import NumberDetail from "./NumberDetail";
 import API from "../utils/API";
 
 class WhitePagesContainer extends Component {
@@ -13,12 +13,12 @@ class WhitePagesContainer extends Component {
     search: ""
   };
 
-  // When this component mounts, search for the movie "The Matrix"
+  // When this component mounts, console log "mounted"
   componentDidMount() {
-    this.searchMovies("The Matrix");
+   console.log("This component mounted!");
   }
 
-  searchMovies = query => {
+  searchNumber = query => {
     API.search(query)
       .then(res => this.setState({ result: res.data }))
       .catch(err => console.log(err));
@@ -32,10 +32,10 @@ class WhitePagesContainer extends Component {
     });
   };
 
-  // When the form is submitted, search the OMDB API for the value of `this.state.search`
+  // When the form is submitted, search the WhitePages Pro API for the value of `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchMovies(this.state.search);
+    this.searchNumber(this.state.search);
   };
 
   render() {
@@ -44,16 +44,22 @@ class WhitePagesContainer extends Component {
         <Row>
           <Col size="md-8">
             <Panel
-              heading={this.state.result.Title || "Search for a Movie to Begin"}
+              heading={this.state.result.phone_number || "Search a Number to Begin"}
             >
+            {console.log(this.state.result.phone_number,
+                    this.state.result.line_type,
+                    this.state.result.carrier)}
+
               {this.state.result.Title
-                ? <MovieDetail
-                    src={this.state.result.Poster}
-                    director={this.state.result.Director}
-                    genre={this.state.result.Genre}
-                    released={this.state.result.Released}
+                ? <NumberDetail
+                    phone_number={this.state.result.phone_number}
+                    line_type={this.state.result.line_type}
+                    carrier={this.state.result.carrier}
+                  
                   />
                 : <h3>No Results to Display</h3>}
+                {console.log(this.state.result)}
+                
             </Panel>
           </Col>
           <Col size="md-4">
@@ -72,3 +78,4 @@ class WhitePagesContainer extends Component {
 }
 
 export default WhitePagesContainer;
+

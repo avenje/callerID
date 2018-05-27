@@ -1,11 +1,10 @@
 import axios from "axios";
-// import secrets from "../secrets.js";
+import {APIKEY} from "../secrets.js";
 
-const BASEURL = "https://www.omdbapi.com/?t=";
-const APIKEY = "&apikey=trilogy";
+const BASEURL = "https://proapi.whitepages.com/3.0/phone.json?";
 
 export default {
   search: function(query) {
-    return axios.get(BASEURL + query + APIKEY);
+    return axios.get(BASEURL + APIKEY + "&phone=" + query);
   }
 };
