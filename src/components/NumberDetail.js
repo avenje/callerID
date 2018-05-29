@@ -13,7 +13,7 @@ const NumberDetail = props =>
     <h3>
       Carrier: {props.carrier}
     </h3>
-    {/* <h2>Number Belongs to: </h2>
+    <h2>Number Belongs to: </h2>
     <h3>
       Name: {props.name}
     </h3>
@@ -28,8 +28,8 @@ const NumberDetail = props =>
       {props.street_line_1}
     </h3>
     <h3>
-       {props.city}<h3>, </h3>{props.state_code}<h3> </h3> {props.postal_code}
-    </h3> */}
+       {props.city}, {props.state_code} {props.postal_code}
+    </h3>
     
   </div>;
 
