@@ -15,7 +15,7 @@ const NumberDetail = props =>
     </h3>
     <h2>Number Belongs to: </h2>
     <h3>
-      Name: {props.name}
+      Name: {props.fullName}
     </h3>
     <h3>
       Age: {props.age_range}

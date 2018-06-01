@@ -47,12 +47,12 @@ class WhitePagesContainer extends Component {
               heading={this.state.result.phone_number || "Search a Number to Begin"}
             >
 
-              {this.state.result.Title
+              {this.state.result.phone_number
                 ? <NumberDetail
                     phone_number={this.state.result.phone_number}
                     line_type={this.state.result.line_type}
                     carrier={this.state.result.carrier}
-                    name={this.state.result.belongs_to[0].name}
+                    fullName={this.state.result.belongs_to[0].name}
                     age={this.state.result.belongs_to[0].age_range}
                     gender={this.state.result.belongs_to[0].gender}
                     street_line_1={this.state.result.current_addresses[0].street_line_1}
@@ -63,7 +63,7 @@ class WhitePagesContainer extends Component {
                   />
                 : <h3>No Results to Display</h3>}
                 {console.log(this.state.result)}
-                {console.log(this.state.result.belongs_to[0].name)}
+                {console.log(this.state.result.belongs_to)}
                
             </Panel>
           </Col>
