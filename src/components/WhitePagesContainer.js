@@ -39,6 +39,11 @@ class WhitePagesContainer extends Component {
   };
 
   render() {
+    
+    if (!this.props ) { // or !this.props.data.length if your have an empty array initially
+      return null; // or some loading indicator 
+  }
+
     return (
       <Container>
         <Row>
