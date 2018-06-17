@@ -1,0 +1,51 @@
+h2 {
+   font-size: 30px;
+   line-height: 0px;
+   font-family: "Montserrat", sans-serif;
+   font-weight: bold;
+   font-family: 'Averia Serif Libre', cursive;
+   color: #646161;
+ }
+ 
+ ul,h3 {
+   /* font-family: "Montserrat", sans-serif; */
+   font-weight: 100;
+   font-family: 'Averia Serif Libre', cursive;
+   
+ }
+
+ panel heading {
+   font-size: 40px;
+   line-height: 0px;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+   
+ }
+
+ .section {
+  padding: 50px;
+  margin: 0 auto;
+}
+
+ .header-title {
+font-size: 50px;
+ }
+
+ li {
+   list-style-type: none;
+ }
+
+ .logo {
+  width: 74%;
+  padding: 10px;
+  margin: 0px;
+  justify-content: center;
+ }
+
+ .whoIs, .thisIs {
+   width: 100px;
+ }
+
+ .panel-heading h2 {
+   margin: 0;
+ }
