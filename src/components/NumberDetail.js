@@ -33,6 +33,12 @@ const NumberDetail = props =>
         </ul>
       </h3>
       <br/>
+      <h2>Associated People</h2>
+      <h3>
+        <ul>
+          <li>{props.associated_people}</li>
+        </ul>
+      </h3>
     </panel>
   </div>;
 

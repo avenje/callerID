@@ -208,7 +208,9 @@ class WhitePagesContainer extends Component {
                     city={this.state.result.current_addresses[0].city}
                     state_code={this.state.result.current_addresses[0].state_code}
                     postal_code={this.state.result.current_addresses[0].postal_code}
-                  
+                    associated_people={this.state.result.associated_people.map(function(user, i) {
+                      return <li key={i}>{user.name + " - Relation: " + user.relation}</li>
+                    })}
                   />
                 : <h3>No Results to Display</h3>}
                 {console.log(this.state.result)}
