@@ -49,3 +49,11 @@ font-size: 50px;
  .panel-heading h2 {
    margin: 0;
  }
+
+ Footer section {
+   position: relative;
+ }
+
+ .footer-section {
+  position: absolute;
+}

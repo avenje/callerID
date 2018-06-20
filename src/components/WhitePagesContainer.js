@@ -179,6 +179,7 @@ class WhitePagesContainer extends Component {
   }
 
     return (
+      <div>
       <Container>
         <Header />
         <Row>
@@ -209,7 +210,7 @@ class WhitePagesContainer extends Component {
                     state_code={this.state.result.current_addresses[0].state_code}
                     postal_code={this.state.result.current_addresses[0].postal_code}
                     associated_people={this.state.result.associated_people.map(function(user, i) {
-                      return <li key={i}>{user.name + " - Relation: " + user.relation}</li>
+                      return <li key={i}>{user.name + " - Relation: " + user.relation.replace(/_/,' ')}</li>
                     })}
                   />
                 : <h3>No Results to Display</h3>}
@@ -218,10 +219,11 @@ class WhitePagesContainer extends Component {
                
             </Panel>
           </Col>
-          
         </Row>
-        <Footer />
+        
       </Container>
+      <Footer />
+      </div>
     );
   }
 }
