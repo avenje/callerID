@@ -19,7 +19,6 @@ const Search = props =>
         minLength="10"
         maxLength="12"
       />
-      <br/>
       <button onClick={props.handleFormSubmit} className="btn btn-default">
         Search
       </button>

@@ -194,7 +194,7 @@ class WhitePagesContainer extends Component {
           
           <Col size="md-8">
             <Panel
-              heading={this.state.result.phone_number || "Search a Phone Number to Begin"}
+              heading={<span className="searchedNum">{this.state.result.phone_number || "Search a Phone Number to Begin"}</span>}
             >
 
               {this.state.result.phone_number
