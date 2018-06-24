@@ -2,25 +2,31 @@ import React from "react";
 import whoIs_white from '../images/whoIs_white.svg';
 
 const Search = props =>
-  <form>
-    <div className="form-group">
+  <div className="searchArea">
+  <form className="input-group-lg">
       <label htmlFor="search">
-        <img src={whoIs_white} className="whoIs" alt="Search"/>
+        <img id="whoisLogo" src={whoIs_white} className="whoIs" alt="Search"/>
       </label>
       <input
       onChange={props.handleInputChange}
         value={props.value}
         name="search"
-        type="number"
+        type="tel"
         className="form-control"
-        placeholder="Search a Number; e.g. 1231231234"
+        placeholder="Search..."
+        required
         id="search"
+        minLength="10"
+        maxLength="12"
       />
-     
+      <br/>
       <button onClick={props.handleFormSubmit} className="btn btn-default">
         Search
       </button>
-    </div>
-  </form>;
+      <span className="validity"></span>
+  </form>
+  <small id="emailHelp" className="form-text text-muted">Search a Number; e.g. 1231231234</small>
+
+</div>
 
 export default Search;

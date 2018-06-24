@@ -14,7 +14,11 @@ const NumberDetail = props =>
     <h2>
       Carrier Info
     </h2>
-    <h3>{props.carrier}</h3>
+    <h3>
+    <ul>
+    <li>{props.carrier}</li>
+    </ul>
+    </h3>
     <br/>
     <h2>Number Belongs to </h2>
     <h3>

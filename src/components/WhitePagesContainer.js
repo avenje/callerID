@@ -210,7 +210,8 @@ class WhitePagesContainer extends Component {
                     state_code={this.state.result.current_addresses[0].state_code}
                     postal_code={this.state.result.current_addresses[0].postal_code}
                     associated_people={this.state.result.associated_people.map(function(user, i) {
-                      return <li key={i}>{user.name + " - Relation: " + user.relation.replace(/_/,' ')}</li>
+                      return <li key={i}>{user.name} 
+                        <p><span className="relation">{" Relation: "}</span> {user.relation.replace(/_/,' ')}</p></li>
                     })}
                   />
                 : <h3>No Results to Display</h3>}

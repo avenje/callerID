@@ -1,3 +1,7 @@
+* {
+  text-align: left;
+}
+
 h2 {
    font-size: 30px;
    line-height: 0px;
@@ -46,6 +50,10 @@ font-size: 50px;
    width: 100px;
  }
 
+ #whoisLogo {
+   margin: 4px 8px 0 0;
+ }
+
  .panel-heading h2 {
    margin: 0;
  }
@@ -57,3 +65,28 @@ font-size: 50px;
  .footer-section {
   position: absolute;
 }
+
+.relation {
+   color: #646161;
+}
+
+form {
+  display: inline-flex;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.searchArea {
+  margin-bottom: 65px;
+}
+
+small {
+  margin-left: 33%;
+}
+
+/* Clear floats */
+/* form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
