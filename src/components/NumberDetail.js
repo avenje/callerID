@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const NumberDetail = props =>
   <div className="text-center">
   <panel>
