@@ -127,11 +127,16 @@ small {
 }
 
 /* Clear floats */
-form#search::after {
+form #search::after {
   content: "";
   clear: both;
   display: table;
 }
+
+#search {
+  font-size: 16px;
+  padding: 0 6px;
+  }
 
 /* Large devices (large desktops, 1200px and up) */
 @media screen and (max-width: 1200px) {
@@ -140,6 +145,11 @@ form#search::after {
     width: 500px;
    }
 
+  }
+
+  /* Large-Med devices 922px and up) */
+@media screen and (max-width: 992px) {
+  
   }
 
 /* Medium devices (desktops, 768px and up) */
@@ -161,5 +171,6 @@ form#search::after {
    .searchedNum {
     font-size: 3.5vw;
   }
+
 
 }

@@ -11,7 +11,8 @@ import Footer from "./Footer";
 
 class WhitePagesContainer extends Component {
   state = {
-    result: {},
+    result: {
+    },
     search: ""
   };
 
