@@ -78,15 +78,22 @@ class WhitePagesContainer extends Component {
                     city={!this.state.result.current_addresses[0] || this.state.result.current_addresses[0].city === null ? "" : this.state.result.current_addresses[0].city}
                     state_code={!this.state.result.current_addresses[0] || this.state.result.current_addresses[0].state_code === null ? "" : this.state.result.current_addresses[0].state_code}
                     postal_code={!this.state.result.current_addresses[0] || this.state.result.current_addresses[0].postal_code === null ? "" : this.state.result.current_addresses[0].postal_code}
-                    associated_people={!this.state.result.associated_people[0] ? <span className="na">No Associated People</span> : this.state.result.associated_people.map(function(user, i) {
-                      return <li key={i}>{user.name} 
-                        <p><span className="relation">{" Relation: "}</span> {user.relation.replace(/_/,' ')}</p></li>
-                    })}
+                    
+                    associated_people={!this.state.result.associated_people[0]
+                      ? <span className="na">No Associated People</span> 
+                      : this.state.result.associated_people.map(function(user, i) {
+                        return <li key={i}>{user.name} 
+                          <p><span className="relation">{" Relation: "}</span> 
+                            {user.relation === null
+                            ? <span className="na">No Relation Info Provided</span>
+                            : user.relation.replace(/_/,' ')}
+                          </p>
+                        </li>
+                      })
+                    }
                   />
                 : <h3>No Results to Display</h3>}
-                {console.log(this.state.result)}
-               
-               
+        
             </Panel>
           </Col>
         </Row>
