@@ -1,6 +1,6 @@
 # Welcome to Who Is This Is!
 
-This a reverse phone number search that will return information from the WhitePages Pro API.  If the data is available, it will give you a full name, address, phone carrier, and associated people.  
+This is a reverse phone number search web page that will return information from the WhitePages Pro API.  If the data is available, it will give you a full name, address, phone carrier, and associated people.  
 
 First, search a ten digit number.
 
