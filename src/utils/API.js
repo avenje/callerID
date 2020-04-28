@@ -1,5 +1,5 @@
 import axios from "axios";
-import {APIKEY} from "../secrets.js";
+// import {APIKEY} from "../secrets.js";
 
 // const BASEURL = "https://proapi.whitepages.com/3.0/phone.json?";
 // const BASEURL = "https://proapi.whitepages.com/3.0/phone.json?";
