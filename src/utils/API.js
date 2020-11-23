@@ -4,7 +4,7 @@ import axios from "axios";
 // const BASEURL = "https://proapi.whitepages.com/3.0/phone.json?";
 // const BASEURL = "https://proapi.whitepages.com/3.0/phone.json?";
 // const BASEURL = "https://api.ekata.com/3.1/phone.json?";
-const BASEURL = "https://api.ekata.com";
+const BASEURL = "https://api.ekata.com/3.1/phone?";
 
 
 export default {
