@@ -9,6 +9,6 @@ const BASEURL = "https://api.ekata.com/3.1/phone?";
 
 export default {
   search: function(query) {
-    return axios.get(BASEURL + "api_key=3dba1e1c5f9a499db22c46ae97ed485d&phone=" + query);
+    return axios.get(BASEURL + "api_key=d8e95d9ba9da4e009d89d60c7be45c87&phone=" + query);
   }
 };
